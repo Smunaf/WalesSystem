@@ -5,31 +5,31 @@ VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalesBackOffice", "WalesBackOffice\WalesBackOffice.csproj", "{C69D0C4B-5FF2-44F5-A87A-E3CA503720E6}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WalesFrontOffice", "WalesFrontOffice\", "{15D6CB82-B73A-4D4B-A5EA-18B812CDB4D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalesClasses", "WalesClasses\WalesClasses.csproj", "{C38111E0-9029-4502-99F9-9757C0127960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wales System Testing", "Wales System Testing\Wales System Testing.csproj", "{1304B35D-78B7-433D-BF91-BC1EE11A766F}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WalesFrontOffice(1)", "WalesFrontOffice\", "{56AB10B0-B30E-4439-A725-F042D6E2A6E0}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_17891"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_1727"
 		Debug.AspNetCompiler.PhysicalPath = "WalesFrontOffice\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_17891\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1727\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_17891"
+		Release.AspNetCompiler.VirtualPath = "/localhost_1727"
 		Release.AspNetCompiler.PhysicalPath = "WalesFrontOffice\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_17891\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1727\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "17891"
+		VWDPort = "1727"
 		SlnRelativePath = "WalesFrontOffice\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalesClasses", "WalesClasses\WalesClasses.csproj", "{C38111E0-9029-4502-99F9-9757C0127960}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wales System Testing", "Wales System Testing\Wales System Testing.csproj", "{1304B35D-78B7-433D-BF91-BC1EE11A766F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,6 @@ Global
 		{C69D0C4B-5FF2-44F5-A87A-E3CA503720E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C69D0C4B-5FF2-44F5-A87A-E3CA503720E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C69D0C4B-5FF2-44F5-A87A-E3CA503720E6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{15D6CB82-B73A-4D4B-A5EA-18B812CDB4D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15D6CB82-B73A-4D4B-A5EA-18B812CDB4D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15D6CB82-B73A-4D4B-A5EA-18B812CDB4D7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{15D6CB82-B73A-4D4B-A5EA-18B812CDB4D7}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{C38111E0-9029-4502-99F9-9757C0127960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C38111E0-9029-4502-99F9-9757C0127960}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C38111E0-9029-4502-99F9-9757C0127960}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +49,10 @@ Global
 		{1304B35D-78B7-433D-BF91-BC1EE11A766F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1304B35D-78B7-433D-BF91-BC1EE11A766F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1304B35D-78B7-433D-BF91-BC1EE11A766F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56AB10B0-B30E-4439-A725-F042D6E2A6E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56AB10B0-B30E-4439-A725-F042D6E2A6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56AB10B0-B30E-4439-A725-F042D6E2A6E0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{56AB10B0-B30E-4439-A725-F042D6E2A6E0}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
