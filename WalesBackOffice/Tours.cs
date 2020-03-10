@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WalesBackOffice
 {
-    public partial class Form1 : Form
+    public partial class Tours : Form
     {
-        public Form1()
+        public Tours()
         {
             InitializeComponent();
         }
