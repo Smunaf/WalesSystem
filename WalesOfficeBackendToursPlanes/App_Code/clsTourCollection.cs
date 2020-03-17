@@ -45,7 +45,7 @@ public class clsTourCollection
             //add the UserID parameter passed to this function to the list of parameters to use in the database
             MyDatabase.AddParameter("@TourNo", mThisTour.TourNo);
             //execute the stored procedure in the database
-            MyDatabase.Execute("sproc_tblUsers_Delete");
+            MyDatabase.Execute("sproc_tblTours_Delete");
             //set the return value for the function
 
             return true;
@@ -121,7 +121,7 @@ public class clsTourCollection
         NewDBTour.AddParameter("@Price", mThisTour.Price);
         NewDBTour.AddParameter("@TourGuide", mThisTour.TourGuide);
         //execute the stored procedure returning the primary key value of the new record
-        return NewDBTour.Execute("sproc_tblUsers_Insert");
+        return NewDBTour.Execute("sproc_tblTours_Insert");
     }
 
     public void Update()
@@ -142,7 +142,7 @@ public class clsTourCollection
         ExistingDBTour.AddParameter("@Price", mThisTour.Price);
         ExistingDBTour.AddParameter("@TourGuide", mThisTour.TourGuide);
         //execute the query
-        ExistingDBTour.Execute("sproc_tblUsers_Update");
+        ExistingDBTour.Execute("sproc_tblTours_Update");
     }
 
     ///this function defines the ReportByFirstName method
@@ -154,7 +154,7 @@ public class clsTourCollection
         //add the parameter data used by the stored procedure
         dBConnection.AddParameter("@TourName", TourName);
         //execute the store procedure to delete the user
-        dBConnection.Execute("sproc_tblUsers_FilterByFirstName");
+        dBConnection.Execute("sproc_tblTours_FilterByTourName");
     }
 
 

@@ -301,7 +301,7 @@ public class clsTour
         //add the car id paramater
         dBConnection.AddParameter("@TourNo", TourNo);
         //execute the query
-        dBConnection.Execute("sproc_tblTours_FilterByTourName");
+        dBConnection.Execute("sproc_tblTours_FilterByTourNo");
         //if the record was found
         if (dBConnection.Count == 1)
         {
