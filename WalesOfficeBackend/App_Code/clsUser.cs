@@ -121,17 +121,17 @@ public class clsUser
         }
     }
 
-    private Boolean mAdminPriviledges;
+    private Boolean mAdminPrivileges;
 
-    public Boolean AdminPriviledges
+    public Boolean AdminPrivileges
     {
         get
         {
-            return mAdminPriviledges;
+            return mAdminPrivileges;
         }
         set
         {
-            mAdminPriviledges = value;
+            mAdminPrivileges = value;
         }
     }
 
@@ -334,14 +334,14 @@ public class clsUser
             mDOB = Convert.ToDateTime(dBConnection.DataTable.Rows[0]["DOB"]);
             //get the address
             mAddress = Convert.ToString(dBConnection.DataTable.Rows[0]["Address"]);
-            //get the admin priviledges
+            //get the admin Privileges
             try
             {
-                mAdminPriviledges = Convert.ToBoolean(dBConnection.DataTable.Rows[0]["AdminPriviledges"]);
+                mAdminPrivileges = Convert.ToBoolean(dBConnection.DataTable.Rows[0]["AdminPrivileges"]);
             }
             catch
             {
-                mAdminPriviledges = true;
+                mAdminPrivileges = true;
             }
             //return success
             return true;

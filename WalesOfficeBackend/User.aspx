@@ -26,7 +26,7 @@
         <asp:TextBox ID="txtTelephoneNumber" runat="server" style="z-index: 1; left: 528px; top: 77px; position: absolute; width: 177px"></asp:TextBox>
         <asp:Label ID="lblEmail" runat="server" style="z-index: 1; left: 386px; top: 167px; position: absolute" Text="Email:"></asp:Label>
         <asp:TextBox ID="txtEmail" runat="server" style="z-index: 1; left: 528px; top: 165px; position: absolute; width: 175px"></asp:TextBox>
-        <asp:CheckBox ID="chkAdminPriviledges" runat="server" style="z-index: 1; left: 379px; top: 211px; position: absolute; margin-bottom: 0px" Text="Admin Priviledges" />
+        <asp:CheckBox ID="chkAdminPrivileges" runat="server" style="z-index: 1; left: 379px; top: 211px; position: absolute; margin-bottom: 0px" Text="Admin Privileges" />
         <asp:Button ID="btnConfirm" runat="server" OnClick="btnConfirm_Click" style="z-index: 1; left: 383px; top: 268px; position: absolute; height: 29px; width: 65px; margin-bottom: 0px" Text="Confirm" />
         <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" style="z-index: 1; left: 463px; top: 268px; position: absolute; height: 29px; width: 64px" Text="Cancel" />
     </form>

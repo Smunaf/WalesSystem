@@ -47,8 +47,8 @@ public partial class User : System.Web.UI.Page
         txtAddress.Text = UserList.Address;
         //display the dob
         txtDOB.Text = UserList.DOB.ToShortDateString();
-        //display the admin priviledges
-        chkAdminPriviledges.Checked = UserList.AdminPriviledges;
+        //display the admin Privileges
+        chkAdminPrivileges.Checked = UserList.AdminPrivileges;
         //set the drop down list to display the role
         ddlRole.SelectedValue = Convert.ToString(UserList.Role);
         //set the drop down list to display the role

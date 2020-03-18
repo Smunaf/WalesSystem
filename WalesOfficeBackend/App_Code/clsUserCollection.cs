@@ -84,7 +84,7 @@ public class clsUserCollection
                 NewUser.Email = Convert.ToString(dBConnection.DataTable.Rows[Index]["Email"]);
                 NewUser.DOB = Convert.ToDateTime(dBConnection.DataTable.Rows[Index]["DOB"]);
                 NewUser.TelephoneNumber = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["TelephoneNumber"]);
-                //NewUser.AdminPriviledges = Convert.ToBoolean(dBConnection.DataTable.Rows[Index]["AdminPriviledges"]);
+                NewUser.AdminPrivileges = Convert.ToBoolean(dBConnection.DataTable.Rows[Index]["AdminPrivileges"]);
                 //add the blank page to the array list
                 mUserList.Add(NewUser);
                 //increase the index
@@ -121,7 +121,7 @@ public class clsUserCollection
         NewDBUser.AddParameter("@Email", mThisUser.Email);
         NewDBUser.AddParameter("@DOB", mThisUser.DOB);
         NewDBUser.AddParameter("@TelephoneNumber", mThisUser.TelephoneNumber);
-        NewDBUser.AddParameter("@AdminPriviledges", mThisUser.AdminPriviledges);
+        NewDBUser.AddParameter("@AdminPrivileges", mThisUser.AdminPrivileges);
         //execute the stored procedure returning the primary key value of the new record
         return NewDBUser.Execute("sproc_tblUsers_Insert");
     }
@@ -143,7 +143,9 @@ public class clsUserCollection
         ExistingDBUser.AddParameter("@Email", mThisUser.Email);
         ExistingDBUser.AddParameter("@DOB", mThisUser.DOB);
         ExistingDBUser.AddParameter("@TelephoneNumber", mThisUser.TelephoneNumber);
-        ExistingDBUser.AddParameter("@AdminPriviledges", mThisUser.AdminPriviledges);
+        ExistingDBUser.AddParameter("@AdminPrivileges", mThisUser.AdminPrivileges);
+        ExistingDBUser.AddParameter("@UserID", mThisUser.UserID);
+
         //execute the query
         ExistingDBUser.Execute("sproc_tblUsers_Update");
     }
