@@ -24,6 +24,8 @@ public partial class Tour : System.Web.UI.Page
                 }
          }
 
+       
+
     }
 
     //this function displays the data for a user on the web form
@@ -45,6 +47,8 @@ public partial class Tour : System.Web.UI.Page
         txtCapacity.Text = TourList.Capacity.ToString();
         //display the dob
         txtPrice.Text = TourList.Price.ToString();
+        //displat ddl
+        ddlAircraft.SelectedValue = Convert.ToString(TourList.AircraftModel);
         //display the admin priviledges
         chkTourGuide.Checked = TourList.TourGuide;
        

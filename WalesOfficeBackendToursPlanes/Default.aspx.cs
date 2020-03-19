@@ -43,7 +43,7 @@ public partial class _Default : System.Web.UI.Page
             Location = TourRecord.TourList[Index].Location;//get the second name
             Price = TourRecord.TourList[Index].Price; //get the role
             AircraftModel = TourRecord.TourList[Index].AircraftModel;
-            ListItem NewEntry = new ListItem(TourName + " " + Location + " " + Price + " " + AircraftModel, TourNo.ToString()); //create a new entry for the list box
+            ListItem NewEntry = new ListItem(TourName + " " + Location + " " + Price , TourNo.ToString()); //create a new entry for the list box
             lstTours.Items.Add(NewEntry);//move the index to the next record
             Index++;
         }

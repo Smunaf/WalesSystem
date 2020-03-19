@@ -107,7 +107,21 @@ public class clsTour
         }
     }
 
-    
+    private string mAircraftModel;
+
+    public string AircraftModel
+    {
+        get
+        {
+            return mAircraftModel;
+        }
+        set
+        {
+            mAircraftModel = value;
+        }
+    }
+
+
     private Boolean mTourGuide;
 
     public Boolean TourGuide
@@ -319,6 +333,8 @@ public class clsTour
             mCapacity = Convert.ToInt32(dBConnection.DataTable.Rows[0]["Capacity"]);
             //get the price
             mPrice = Convert.ToDecimal(dBConnection.DataTable.Rows[0]["Price"]);
+            //get the Aircraft
+            mAircraftModel = Convert.ToString(dBConnection.DataTable.Rows[0]["AircraftModel"]);
             //get the tourguide
             try
             {

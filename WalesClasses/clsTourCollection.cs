@@ -1,6 +1,6 @@
 ﻿namespace WalesClasses
 {
-    public class clsReview
+    public class clsTourCollection
     {
     }
 }

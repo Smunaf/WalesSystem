@@ -15,7 +15,7 @@ public class clsAircraftCollection
     public clsAircraftCollection()
     {
         //execute the select all query
-        Aircrafts.Execute("sproc_tblRole_SelectAll");
+        Aircrafts.Execute("sproc_tblAircraft_SelectAll");
     }
 
     //this read only function gives us the count property
