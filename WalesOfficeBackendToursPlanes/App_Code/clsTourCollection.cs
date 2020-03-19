@@ -76,13 +76,14 @@ public class clsTourCollection
                 //create a blank user page
                 clsTour NewTour = new clsTour();
                 //copy the data from the table to the RAM
-                NewTour.TourNo = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["UserID"]);
+                NewTour.TourNo = Convert.ToInt32(dBConnection.DataTable.Rows[Index]["TourNo"]);
                 NewTour.TourName = Convert.ToString(dBConnection.DataTable.Rows[0]["TourName"]);
                 NewTour.Location = Convert.ToString(dBConnection.DataTable.Rows[0]["Location"]);
                 NewTour.Date = Convert.ToDateTime(dBConnection.DataTable.Rows[0]["Date"]);
                 NewTour.DepartureTime = Convert.ToDateTime(dBConnection.DataTable.Rows[0]["DepartureTime"]);
                 NewTour.Capacity = Convert.ToInt32(dBConnection.DataTable.Rows[0]["Capacity"]);
                 NewTour.Price = Convert.ToDecimal(dBConnection.DataTable.Rows[0]["Price"]);
+                NewTour.AircraftModel = Convert.ToString(dBConnection.DataTable.Rows[0]["AircraftModel"]);
                 //NewUser.TourGuide = Convert.ToBoolean(dBConnection.DataTable.Rows[0]["TourGuide"]);
                 //add the blank page to the array list
                 mTourList.Add(NewTour);
@@ -119,6 +120,7 @@ public class clsTourCollection
         NewDBTour.AddParameter("@DepartureTime", mThisTour.DepartureTime);
         NewDBTour.AddParameter("@Capacity", mThisTour.Capacity);
         NewDBTour.AddParameter("@Price", mThisTour.Price);
+        NewDBTour.AddParameter("@AircraftModel", mThisTour.AircraftModel);
         NewDBTour.AddParameter("@TourGuide", mThisTour.TourGuide);
         //execute the stored procedure returning the primary key value of the new record
         return NewDBTour.Execute("sproc_tblTours_Insert");
@@ -140,6 +142,7 @@ public class clsTourCollection
         ExistingDBTour.AddParameter("@DepartureTime", mThisTour.DepartureTime);
         ExistingDBTour.AddParameter("@Capacity", mThisTour.Capacity);
         ExistingDBTour.AddParameter("@Price", mThisTour.Price);
+        ExistingDBTour.AddParameter("@AircraftModel", mThisTour.AircraftModel);
         ExistingDBTour.AddParameter("@TourGuide", mThisTour.TourGuide);
         //execute the query
         ExistingDBTour.Execute("sproc_tblTours_Update");
