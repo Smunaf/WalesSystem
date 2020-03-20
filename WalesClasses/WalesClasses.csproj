@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsBookingCollection.cs" />
+    <Compile Include="clsBookings.cs" />
     <Compile Include="clsDataConnection.cs" />
     <Compile Include="clsReview.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
