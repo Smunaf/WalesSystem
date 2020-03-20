@@ -17,6 +17,8 @@ public partial class _Default : System.Web.UI.Page
         }
     }
 
+    
+
     protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
     {
 
@@ -40,6 +42,7 @@ public partial class _Default : System.Web.UI.Page
             lblError.Text = "You must select an item off the list first to delete it.";
         }
     }
+
 
     protected void btnAdd_Click(object sender, EventArgs e)
     {
@@ -102,5 +105,7 @@ public partial class _Default : System.Web.UI.Page
         }
         return RecordCount;//return the count of records found
     }
+
+    
 
 }

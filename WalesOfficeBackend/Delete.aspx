@@ -6,8 +6,8 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
-    <form id="form1" runat="server">
+<body style="background-color:LIGHTSKYBLUE;">
+    <form id="form1" style="background-color:LIGHTSKYBLUE;" runat="server">
         <div>
         </div>
         <asp:Label ID="lblDeleteConfirm" runat="server" style="z-index: 1; left: 95px; top: 113px; position: absolute; width: 332px" Text="Are you sure you want to remove this User?"></asp:Label>
