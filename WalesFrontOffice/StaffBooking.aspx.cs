@@ -10,11 +10,11 @@ public partial class StaffBooking : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if (IsPostBack == false)
-        //{
-        ////    display all bookings
-        //    DisplayBookings("");
-        //}
+        if (IsPostBack == false)
+        {
+            //    display all bookings
+            DisplayBookings("");
+        }
     }
 
     protected void btnDisplay_Click(object sender, EventArgs e)

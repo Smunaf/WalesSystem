@@ -11,7 +11,7 @@
         <div>
             <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" style="z-index: 1; left: 577px; top: 343px; position: absolute" Text="Make New Booking" />
         </div>
-        <asp:Button ID="btnDisplay" runat="server" OnClick="btnDisplay_Click" style="z-index: 1; left: 358px; top: 343px; position: absolute" Text="Display Bookings" />
+        <asp:Button ID="btnDisplay" runat="server" OnClick="btnDisplay_Click" style="z-index: 1; left: 358px; top: 343px; position: absolute; right: 540px;" Text="Display Bookings" />
         <asp:ListBox ID="lstDisplay" runat="server" style="z-index: 1; left: 125px; top: 53px; position: absolute; height: 252px; width: 623px"></asp:ListBox>
         <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" style="z-index: 1; left: 130px; top: 343px; position: absolute" Text="Cancel Booking" />
     </form>
