@@ -39,6 +39,7 @@ namespace WalesClasses
                 mThisBooking = value;
             }
         }
+        
 
         public List<clsBookings> BookingList
         {
@@ -75,29 +76,29 @@ namespace WalesClasses
 
 
         //function for adding new booking record to the database 
-        public Int32 Add(clsBookings NewBooking)
+        public Int32 Add()
         {
             clsDataConnection NewDBBooking = new clsDataConnection();
             //add the parameters
-            NewDBBooking.AddParameter("@BookingNo", NewBooking.BookingNo);
-            NewDBBooking.AddParameter("@CustomerNo", NewBooking.CustomerNo);
-            NewDBBooking.AddParameter("@TourNo", NewBooking.TourNo);
-            NewDBBooking.AddParameter("@DateTime", NewBooking.DateandTime);
-            NewDBBooking.AddParameter("@PassengerCount", NewBooking.PassengerCount);
+            NewDBBooking.AddParameter("@BookingNo", mThisBooking.BookingNo);
+            NewDBBooking.AddParameter("@CustomerNo", mThisBooking.CustomerNo);
+            NewDBBooking.AddParameter("@TourNo", mThisBooking.TourNo);
+            NewDBBooking.AddParameter("@DateTime", mThisBooking.DateandTime);
+            NewDBBooking.AddParameter("@PassengerCount", mThisBooking.PassengerCount);
             //execute the insert stored procedure 
             return NewDBBooking.Execute("sproc_tblBookings_Insert");
         }
 
         //function to update an existing record on the dbase
-        public void Update(clsBookings ExistingBooking)
+        public void Update()
         {
             clsDataConnection ExistingDBBooking = new clsDataConnection();
             //add parameters
-            ExistingDBBooking.AddParameter("@BookingNo", ExistingBooking.BookingNo);
-            ExistingDBBooking.AddParameter("@CustomerNo", ExistingBooking.CustomerNo);
-            ExistingDBBooking.AddParameter("@TourNo", ExistingBooking.TourNo);
-            ExistingDBBooking.AddParameter("@DateTime", ExistingBooking.DateandTime);
-            ExistingDBBooking.AddParameter("@PassengerCount", ExistingBooking.PassengerCount);
+            ExistingDBBooking.AddParameter("@BookingNo", mThisBooking.BookingNo);
+            ExistingDBBooking.AddParameter("@CustomerNo", mThisBooking.CustomerNo);
+            ExistingDBBooking.AddParameter("@TourNo", mThisBooking.TourNo);
+            ExistingDBBooking.AddParameter("@DateTime", mThisBooking.DateandTime);
+            ExistingDBBooking.AddParameter("@PassengerCount", mThisBooking.PassengerCount);
             //execute the sproc
             ExistingDBBooking.Execute("sproc_tblBooking_Update");
         }
@@ -122,15 +123,17 @@ namespace WalesClasses
             }
         }
 
-        //function to define the reportbytourname method
-        public void ReportByTourName(string TourName)
+
+        //////////////////////////////////////////////////////////////////For Tours
+        //function to define the reportbybookingno method
+        public void ReportByBookingNo(string BookingNo)
         {
             //initialise the dbase connection
             dbConnection = new clsDataConnection();
             //add the parameter data used by sproc
-            dbConnection.AddParameter("@TourName", TourName);
+            dbConnection.AddParameter("@BookingNo", BookingNo);
             //execute the sproc to filter
-            dbConnection.Execute("sproc_tblTours_FilterByTourName");
+            dbConnection.Execute("sproc_tblBooking_FilterByBookingNoDisplay");
         }
     }
 }
